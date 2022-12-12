@@ -27,3 +27,10 @@ def create_project(request):
         "form": form,
     }
     return render(request, "projects/create.html", context)
+
+
+@login_required
+def show_project(request, id):
+    project = Project.objects.get(pk=id)
+    context = {"project": project}
+    return render(request, "projects/detail.html", context)
