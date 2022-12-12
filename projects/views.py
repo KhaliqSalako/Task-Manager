@@ -20,7 +20,7 @@ def create_project(request):
         if form.is_valid():
             project = form.save(False)
             project.save()
-            return redirect()
+            return redirect("list_projects")
     else:
         form = ProjectForm()
     context = {
