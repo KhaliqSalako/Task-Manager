@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from accounts.forms import LogInForm  # SignUPForm
+from accounts.forms import LogInForm, SignUpForm
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
