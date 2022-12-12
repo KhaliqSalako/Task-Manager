@@ -13,7 +13,7 @@ class Task(models.Model):
         related_name="tasks",
         on_delete=models.CASCADE,
     )
-    assigned = models.ForeignKey(
+    assignee = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         null=True,
         related_name="tasks",
